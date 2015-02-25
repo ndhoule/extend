@@ -1,0 +1,28 @@
+{
+  "name": "extend",
+  "version": "1.0.0",
+  "description": "Extend an object with the properties of another.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndhoule/extend.git"
+  },
+  "keywords": [
+    "component",
+    "functional",
+    "extend"
+  ],
+  "author": "Nathan Houle <nathan@nathanhoule.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndhoule/extend/issues"
+  },
+  "homepage": "https://github.com/ndhoule/extend",
+  "devDependencies": {
+    "deep-eql": "^0.1.3",
+    "mocha": "^2.1.0"
+  }
+}
