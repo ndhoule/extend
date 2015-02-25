@@ -13,18 +13,14 @@ describe('extend', function() {
     assert(extend.length === 1);
   });
 
-  it('should not copy inherited properties onto the destination', function() {
-    var parent = { parent: true };
-    var child = Object.create(parent);
-    child.child = true;
+  it('should return the first argument', function() {
+    var obj = { a: 'a' };
+    var obj2 = { b: 'b' };
 
-    assert(eql(
-      extend({}, child),
-      { child: true }
-    ));
+    assert(extend(obj, obj2) === obj);
   });
 
-  it('should work with multiple arguments', function() {
+  it('should accept multiple source arguments', function() {
     var a = { a: 'a', aa: 'aa' };
     var b = { b: 'b' };
     var c = { c: 'c', cc: 'cc', ccc: 'ccc' };
@@ -36,33 +32,24 @@ describe('extend', function() {
     ));
   });
 
-  it('should mutate the first argument', function() {
-    var obj = { a: 'a' };
-    var obj2 = { b: 'b' };
+  it('should not copy inherited properties from source objects', function() {
+    var parent = { parent: true };
+    var child = Object.create(parent);
+    child.child = true;
 
-    assert(extend(obj, obj2) === obj);
+    assert(eql(
+      extend({}, child),
+      { child: true }
+    ));
   });
 
-  it('should skip non-enumerable properties on source objects', function() {
+  it('should not copy non-enumerable properties from source objects', function() {
     var obj = { a: 'a' };
     Object.defineProperty(obj, 'ignore', { value: true, enumerable: false });
     var expected = { a: 'a', b: 'b' };
 
     assert(eql(
       extend({}, obj, { b: 'b' }),
-      expected
-    ));
-  });
-
-  it('should skip inherited properties on source objects', function() {
-    var parent = { parent: true };
-    var child = Object.create(parent);
-    child.child = true;
-    var another = { another: true };
-    var expected = { child: true, another: true };
-
-    assert(eql(
-      extend({}, child, another),
       expected
     ));
   });
