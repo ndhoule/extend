@@ -20,6 +20,8 @@
   "homepage": "https://github.com/ndhoule/extend",
   "devDependencies": {
     "deep-eql": "^0.1.3",
+    "eslint": "^0.15.1",
+    "jsfmt": "^0.4.0",
     "mocha": "^2.1.0"
   }
 }
