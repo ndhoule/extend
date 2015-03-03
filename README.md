@@ -1,4 +1,4 @@
-# extend [![Circle CI][circleci-badge]][circleci-link]
+# extend [![CI][ci-badge]][ci-link]
 
 Extend an object with the properties of another.
 
@@ -12,5 +12,5 @@ component install ndhoule/extend
 
 Released under the [MIT license](LICENSE.md).
 
-[circleci-link]: https://circleci.com/gh/ndhoule/extend
-[circleci-badge]: https://circleci.com/gh/ndhoule/extend.svg?style=svg&circle-token=083f3e31ded7394a6fc70495b072b20fe05d3e92
+[ci-link]: https://travis-ci.org/ndhoule/extend
+[ci-badge]: https://travis-ci.org/ndhoule/extend.svg?branch=master
