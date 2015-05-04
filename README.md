@@ -5,7 +5,8 @@ Extend an object with the properties of another.
 ## Installation
 
 ```sh
-component install ndhoule/extend
+$ component install ndhoule/extend
+$ npm install @ndhoule/extend
 ```
 
 ## License
