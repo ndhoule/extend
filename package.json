@@ -1,6 +1,6 @@
 {
   "name": "@ndhoule/extend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extend an object with the properties of another.",
   "main": "index.js",
   "repository": {
