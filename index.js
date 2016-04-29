@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * hasOwnProperty reference.
- */
-
 var has = Object.prototype.hasOwnProperty;
 
 /**
@@ -26,8 +22,7 @@ var has = Object.prototype.hasOwnProperty;
  * extend(a, b, c);
  * //=> { a: 'a', b: 'b', c: 'c' };
  */
-
-module.exports = function(dest /*, sources */) {
+var extend = function extend(dest /*, sources */) {
   var sources = Array.prototype.slice.call(arguments, 1);
 
   for (var i = 0; i < sources.length; i += 1) {
@@ -40,3 +35,9 @@ module.exports = function(dest /*, sources */) {
 
   return dest;
 };
+
+/*
+ * Exports.
+ */
+
+module.exports = extend;
